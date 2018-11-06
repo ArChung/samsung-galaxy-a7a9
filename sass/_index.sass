@@ -1,0 +1,674 @@
+
+html,body 
+	width: 100%
+	height: 100%
+.fullImg
+	max-width: auto
+	width: 100%
+a:hover 
+	text-decoration: none
+.bls
+	letter-spacing: .3em
+.ta_c
+	text-align: center
+.db
+	display: block
+.event-none
+	pointer-events: none
+
+.mx-a
+	margin-left: auto
+	margin-right: auto
+.ui-widget.ui-widget-content
+	background-color: #7d7d7d
+	height: 2px
+	position: relative
+	span 
+		width: 20px
+		height: 20px
+		margin-top: -10px
+		margin-left: -10px
+		+border-radius(20px)
+		background-color: #7d7d7d
+		position: absolute
+		z-index: 2
+		cursor: default
+		-ms-touch-action: none
+		touch-action: none
+.gTxt
+	color: #959595
+.mt-1
+	margin-top: 15px	
+.mt-3
+	margin-top: 30px
+.mt-5
+	margin-top: 50px
+.pt-1
+	padding-top: 15px	
+.pt-3
+	padding-top: 30px
+.pt-5
+	padding-top: 50px
+.py-5
+	padding-top: 50px
+	padding-bottom: 50px
+.px-3
+	padding-left: 30px
+	padding-right: 30px
+
+=centerX
+	position: relative
+	left: 50%
+	+transform(translateX(-50%))
+
+=centerY
+	position: absolute
+	top: 50%
+	+transform(translateY(-50%))
+
+=center
+	position: absolute
+	left: 50%	
+	top: 50%	
+	+transform(translateY(-50%) translateX(-50%))
+
+.db
+	display: block
+.fz3 
+	font-size: 18px
+	+phone
+		font-size: 26px
+.fz2
+	font-size: 22px
+	+phone
+		font-size: 30px
+.fz1
+	font-size: 50px
+	+phone
+		// font-size: 
+.fz4
+	font-size: 14px
+	+phone
+		// font-size: 
+.fwb
+	font-weight: bold
+.centerImg
+	display: block
+	margin: 0 auto
+.df
+	display: flex
+	flex-wrap: wrap
+	&.jsb
+		justify-content: space-between
+	&.jsa
+		justify-content: space-around
+	&.fce
+		justify-content: flex-end
+	&.jcc
+		justify-content: center
+	&.aic
+		align-items: center	 
+
+.s_mainContainer
+	*
+		box-sizing: border-box
+	.s_btn
+		cursor: pointer
+		padding: 0 30px
+		height: 55px
+		line-height: 55px
+		min-width: 160px
+		+bgi('bg3.png')
+		+coverBg
+		color: #fff
+		text-align: center
+		+border-radius(25px)
+		font-weight: bold
+		font-size: 28px
+		display: inline-block
+		letter-spacing: 0.1em
+		text-shadow: 2px 2px 3px #0c6ba1
+		&:not(:last-child)
+			margin-right: 20px
+		&.btn2
+			+bgi('bg2.png')
+		&.pinkBtn
+			+bgi('bg_p.png')
+			text-shadow: 2px 2px 3px #74004e
+		&.bBtn
+			min-width: 260px	
+		+dTime
+		+phone
+			height: 70px
+			line-height: 70px
+			font-size: 40px
+			min-width: 300px
+			+border-radius(35px)
+			&:not(:last-child)
+				margin-right: 30px
+			
+		// &:hover
+		// 	+opacity(0.9)
+		
+
+	.s_container
+		position: relative
+		max-width: 1200px
+		width: 100%
+		margin: 0 auto
+
+	.s_menu
+		height: 60px
+		width: 100%
+		+bgi('bg1.png')
+		+coverBg
+		z-index: 10
+		
+		
+		
+		.s_menuBtn
+			+bg('moblieBtn.png')
+			position: absolute
+			top: 0
+			right: 0
+		.btns
+			+phone 
+				display: none
+				
+			a 
+				display: block
+				border: 1.5px solid transparent 
+				+dTime
+				height: 40px
+				line-height: 40px
+				min-width: 100px
+				text-align: center
+				color: white
+				padding: 0 20px
+				+pc
+					+border-radius(20px)
+					&:hover
+						border: 1.5px solid white
+					
+				+phone 
+					width: 100%
+					height: 60px
+					line-height: 60px
+					&:not(:last-child)
+						border-bottom: 1px solid #fff 
+		+phone 
+			position: fixed
+			top: 0
+			left: 0
+			height: auto
+			&.open
+				.btns
+					display: block
+				.s_menuBtn
+					display: none !important
+	.p_index
+		min-height: 760px
+		overflow-y: hidden
+		.pics
+			+centerX
+			position: absolute
+			margin-left: -320px
+			margin-top: -70px
+			+phone
+				position: relative
+				margin-left: -130px
+
+			.p1
+				+bg('ph1.png')
+				position: relative
+				top: 0	
+				left: 0
+			.p2
+				+bg('ph2.png')
+				position: absolute
+				top: 0	
+				left: 0
+			.p3
+				+bg('ph3.png')
+				position: absolute
+				top: 0	
+				left: 0
+				
+		.txt
+			float: right
+			padding: 80px 20px
+			width: 450px
+			position: relative
+			z-index: 2
+			width: 430px
+			+phone
+				float: none
+				margin: 0 auto
+				width: auto
+				padding-top: 0
+				img 
+					display: block
+					margin: 0 auto
+				
+			.t1
+				+bg('title01.png')
+				margin: 0 auto
+		.arr
+			+bg('arr.png')
+			+centerX
+	.p_fun
+		background-size: 100% 100%
+		+bgi('bg01.png')
+		.s_title
+			> *
+				margin-bottom: 30px
+			.t1
+				+bg('t101.png')
+			.t2
+				+bg('t102.png')
+			.t3	
+				+bg('t103.png')
+	.funtions
+		.s_phoneBox
+			margin-top: 100px
+			display: flex
+			justify-content: space-around
+			flex-wrap: wrap
+			&:nth-child(2n)
+				flex-direction: row-reverse
+			.emoji1
+				+bg('f01.png')
+				top: -65px
+				left: 116px
+				position: absolute
+				+phone
+					top: -20px
+					left: -15px
+			.emoji2
+				+bg('f04.png')
+				position: absolute
+				left: 379px
+				top: -100px
+			.emoji3
+				+bg('f02.png')
+				position: absolute
+				left: 128px
+				top: -30px
+				+phone
+					left: -22px
+					top: -11px
+			.emoji4
+				+bg('f03.png')
+				position: absolute
+				left: 115px
+				top: -43px
+				+phone
+					left: 345px
+					top: -33px
+			.s_txt
+				position: relative
+				+phone
+					margin-top: 40px
+					text-align: center
+				.s_tt
+					font-size: 36px
+					color: #007bc9
+					display: inline-block
+					position: relative
+					
+					&:after
+						content: ''
+						position: absolute
+						top: 18px
+						right: -28px
+						+bg('txtd1.png')
+					+phone
+						font-size: 50px
+						&:after
+							top: 30px
+						
+				.s_t
+					font-weight: bold
+					font-size: 38px
+					color: #007bc9
+					margin-top: -0.2em
+					display: inline-block
+					position: relative
+					+phone
+						font-size: 50px					
+					&:after
+						content: ''
+						+bg('txtd2.png')
+						top: -25px
+						right: -38px
+						position: absolute
+				.s_content
+					font-size: 28px
+					margin-top: 15px
+					color: #221815
+					+phone
+						font-size: 38px
+				.s_btn
+					margin-top: 40px
+			.s_phone
+				position: relative
+				.ui
+					margin-top: 20px
+					display: flex
+					justify-content: center
+					line-height: 38px
+					.lt	
+						text-align: right
+						padding: 0 20px
+						min-width: 170px
+						
+					.rt
+						text-align: left
+						padding: 0 20px
+						min-width: 170px
+						
+					
+			.s_p1 
+				.sp
+					+bg('pp012.png')
+					+dTime
+				.uu
+					+bg('ui1.png')
+					+dTime
+				&.switch
+					.sp
+						+bg('pp01.png')
+					.uu
+						+bg('ui2.png')
+
+				
+			.s_p2
+				.sp
+					+bg('pp21.png') 
+					+dTime
+				.uu
+					+bg('ui21.png')
+					+dTime  
+				&.switch
+					.sp
+						+bg('pp22.png')
+					.uu
+						+bg('ui22.png')
+			.s_p3
+				.sp
+					position: relative
+					
+					>*
+						position: absolute
+						top: 0
+						left: 0
+					.p1
+						+bg('pp31.png')
+						position: relative
+					.p2
+						+bg('pp32.png')
+						+opacity(0)
+					.f
+						+bg('pf.png')
+					.st 
+						+bg('like.png')
+						color: white
+						padding-left: 37px
+						line-height: 45px
+						font-size: 24px
+						font-weight: bold
+						+rotate(-20deg)
+						top: -25px
+						left: 215px
+
+					
+				.s_slider
+					width: 60%
+					margin: 0 auto
+					margin-top: 30px
+					&:before
+						content: '+'
+						position: absolute
+						color: #898989
+						right: -30px
+						top: -20px
+						font-size: 24px
+						font-weight: bold
+					&:after
+						content: '-'
+						position: absolute
+						color: #898989
+						left: -30px
+						top: -20px
+						font-size: 24px
+						font-weight: bold
+				
+			.s_p4
+				.sp
+					position: relative
+					>*
+						position: absolute
+						top: 0
+						left: 0
+				.p1
+					+bg('pp51.png')
+					position: relative
+				.p2
+					+bgi('pp52.png')
+					height: 312px
+					background-repeat: no-repeat
+					width: 53px
+				.f
+					+bg('pf.png')
+				.uii
+					+bg('ui3.png')
+					left: 42px
+					top: 16px
+			.s_p5
+				.sp
+					+bg('pp41.png')
+			
+	.bg03
+		+bgi('bg04.jpg')
+		background-size: 100% 100%
+	.p_video
+		+bgi('bg02.png')
+		background-size: 100% 100%
+		+phone 
+			.s_container
+				padding-left: 25px
+				padding-right: 25px
+		.s_btns
+			.s_btn
+				min-width: 260px
+		.videoWrap
+			position: relative
+		
+			.videoBox
+				+aspect-ratio(560,315)
+				width: calc(100% - 200px)
+				position: relative
+				background-color: #000
+				iframe
+					position: absolute
+					width: 100%
+					height: 100%
+					top: 0
+					left: 0
+				+phone
+					width: 100%
+
+			.vMenuBox
+				width: 200px
+				height: 100%
+				position: absolute
+				top: 0
+				right: 0
+				background-color: #333
+				+phone
+					width: 100%
+					position: relative
+					white-space: nowrap
+					padding: 0 25px
+					.v_grounp
+						display: inline-block
+				.vTitle
+					position: relative
+					height: 50px
+					line-height: 50px
+					&:after
+						content: ''
+						position: absolute
+						bottom: 8px
+						left: 50%
+						+bg('cLine.png')
+						margin-left: -53px 
+					+phone
+						// width: 100%
+						text-align: left
+						padding-left: 30px
+						&:after
+							left: 10px
+							margin-left: 0
+
+
+				.v_videoBtns
+					+phone
+						display: flex
+
+				.vmBtn
+					cursor: pointer
+					.s_pic
+						height: 120px
+						width: 100%
+						+coverBg
+					.sTxt
+						padding: 10px 15px
+						text-align: left
+					+phone
+						margin-right: 15px
+						.s_pic
+							height: 120px
+							width: 200px
+	.p_blog
+		.s_container
+			+phone 
+				padding: 0 25px
+		.pt
+			margin: 0 auto
+			+bg('title04.png') 
+		.s_manBtns
+			
+			.manBtn
+				cursor: pointer
+				height: 370px
+				&:hover
+					.pic	
+						+opacity(1)
+				.pic
+					+dTime
+					width: 239px
+					height: 306px
+					+scale(0.6)
+					+opacity(.5)
+				.txt
+					margin-top: -50px
+					+dTime
+					.s_name
+						font-size: 39px
+						font-weight: bold
+						margin-top: -8px
+
+				&.active
+					.pic	
+						+opacity(1)
+						+scale(1)
+						margin-top: 50px
+					.txt
+						+opacity(0)
+						height: 0
+				+phone
+					margin-top: -30px
+		.s_works
+			.s_work
+				position: relative
+				display: none
+				&.active
+					display: block
+				.pic
+					width: calc(100%-330px)
+					margin-left: 310px
+					height: 520px
+					+coverBg
+					+phone 
+						width: 100%
+						margin-left: 0
+				.txt
+					+bgi('bg4.png')
+					+coverBg
+					position: absolute
+					height: 100%
+					width: 330px
+					top: 0
+					left: 0
+					padding: 50px 35px
+					text-shadow: 2px 2px 3px #353535
+					.noteT
+						text-shadow: none
+						
+					.s_name
+						font-size: 50px
+					.s_title
+						+phone 
+							width: 45%
+						
+					.s_content
+						margin-top: 10px
+						line-height: 2em
+						+phone 
+							margin-top: 0
+							width: 55%
+							padding-left: 30px
+					+phone 
+						width: 100%
+						position: relative
+						display: flex
+	.s_shop
+		.btns
+			display: flex
+			justify-content: space-between
+			.lbtn
+				width: 48% 
+				height: 90px
+				line-height: 90px
+				text-align: center
+				font-size: 40px
+				font-weight: bold
+				background-color: white
+				.arr
+					+bg('arr0.png')
+					display: inline-block
+					vertical-align: text-top
+					margin-top: 13px
+					margin-left: 25px
+
+		.s_shops
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+			.s_shopBtn
+				display: block
+				margin-top: 20px
+				width: 218px
+				position: relative
+			a.s_shopBtn
+				&:after
+					content: ''
+					position: absolute
+					+bg('arr0.png')
+					right: 20px
+					bottom: 20px
+
+			@for $i from 1 through 15
+				.ss#{$i}
+					+bg('e#{$i}.png')
