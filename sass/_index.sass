@@ -1,4 +1,6 @@
+@charset "UTF-8"
 
+	
 html,body 
 	width: 100%
 	height: 100%
@@ -99,7 +101,7 @@ a:hover
 	display: flex
 	flex-wrap: wrap
 	&.jsb
-		justify-content: space-between
+		justify-content: space-between!important
 	&.jsa
 		justify-content: space-around
 	&.fce
@@ -163,6 +165,7 @@ a:hover
 		+bgi('bg1.png')
 		+coverBg
 		z-index: 10
+		position: fixed
 		
 		
 		
@@ -348,6 +351,7 @@ a:hover
 					color: #221815
 					+phone
 						font-size: 38px
+				
 				.s_btn
 					margin-top: 40px
 			.s_phone
@@ -388,7 +392,7 @@ a:hover
 					+dTime
 				.uu
 					+bg('ui21.png')
-					+dTime  
+					+dTime	
 				&.switch
 					.sp
 						+bg('pp22.png')
@@ -590,6 +594,16 @@ a:hover
 						height: 0
 				+phone
 					margin-top: -30px
+					&:nth-child(1)
+						order: 1
+					&:nth-child(2)
+						order: 3
+					&:nth-child(3)
+						order: 2
+					&:nth-child(4)
+						order: 4
+					&:nth-child(5)
+						order: 5
 		.s_works
 			.s_work
 				position: relative
@@ -622,7 +636,10 @@ a:hover
 					.s_title
 						+phone 
 							width: 45%
-						
+					.buttomTxt
+						position: absolute
+						bottom: 15px
+						left: 35px
 					.s_content
 						margin-top: 10px
 						line-height: 2em
@@ -634,6 +651,12 @@ a:hover
 						width: 100%
 						position: relative
 						display: flex
+						padding-bottom: 160px
+						.buttomTxt
+							+centerX
+							position: absolute
+							text-align: center
+							
 	.s_shop
 		.btns
 			display: flex
@@ -673,3 +696,66 @@ a:hover
 			@for $i from 1 through 15
 				.ss#{$i}
 					+bg('e#{$i}.png')
+.slick-dots li button:before
+	font-size: 55px
+	color: #007dc4
+.slick-dots li.slick-active button:before
+	color: #007dc4
+.slick-dots li:only-child
+	display: none
+.cards
+	.lines-3
+		min-height: 5em
+
+	.hideContent
+		max-height: 7em
+		line-height: 1.75em	
+		overflow: hidden
+		width: 100%
+		position: relative
+		.moreBtn 
+			color: #0068a7
+			background-color: white
+			position: absolute
+			bottom: 0
+			right: 0
+			display: block
+			&:after
+				content: ''
+				height: 100%
+				width: 15px
+				// background-color: red
+				position: absolute
+				left: -14px
+				top: 0
+				+bgi('tw.png')
+				// right: 0
+				// top: 0
+				// border: 1px solid #000
+
+	.card
+		width: 255px
+		margin-bottom: 15px
+		&:not(:last-child)
+			margin-right: 25px
+		.pic
+			width: 100%
+			height: 195px
+			+coverBg
+		.txtWrap
+			padding: 15px
+			background-color: white
+		.s_btn
+			margin: 0 auto
+			margin-top: 25px
+			width: 50%
+			font-size: 18px
+			height: 40px
+			line-height: 40px 
+			min-width: auto
+			font-weight: normal
+			display: block
+		
+
+#blogger
+	
